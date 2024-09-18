@@ -1,0 +1,111 @@
+:root {
+    --default-header-background-color: #40459c;
+    --default-sidebar-background-color-v1: #ce311d;
+    --default-sidebar-background-color-v2: #543117;
+    --default-content-background-color: #BBCFEE;
+    --default-footer-background-color: #76a979;
+    --left-sidebar-font-color: #eabe21;
+    --header-font-color: #af6584;
+    --content-font-color: #000000;
+    --right-sidebar-font-color: #8ba197;
+    --footer-font-color: #000000;
+    --default-background-color-hover: blue;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    height: 150px;
+    background-color: var(--default-header-background-color);
+}
+
+.header p {
+    color: var(--header-font-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-sidebar {
+    width: 18%;
+    height: 500px;
+    background-color: var(--default-sidebar-background-color-v1);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.nav-list .nav-cell {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.nav-cell:hover {
+    background-color: var(--default-background-color-hover);
+}
+
+.nav-cell a {
+    color: var(--left-sidebar-font-color);
+    font-size: 20px;
+}
+
+.content {
+    background-color: var(--default-content-background-color);
+    width: calc(100% - 18% - 18%);
+}
+
+.content p {
+    color: var(--content-font-color);
+}
+
+.right-sidebar {
+    width: 18%;
+    background-color: var(--default-sidebar-background-color-v2);
+}
+
+.right-sidebar p {
+    color: var(--right-sidebar-font-color);
+}
+
+.footer {
+    width: 100%;
+    height: calc(100vh - 500px - 150px - 10px);
+    background-color: var(--default-footer-background-color);
+}
+
+.footer p {
+    color: var(--footer-font-color);
+}
